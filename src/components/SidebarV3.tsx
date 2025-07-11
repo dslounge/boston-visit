@@ -70,7 +70,11 @@ export const SidebarV3: React.FC<SidebarProps> = ({ items, selectedItem, onItemC
                     <div className="item-description">{placeItem.description}</div>
                   )}
                   <a 
-                    href={`https://www.google.com/maps/search/?api=1&query=${placeItem.location.lat},${placeItem.location.lng}`}
+                    href={
+                      placeItem.location.placeId
+                        ? `https://www.google.com/maps/place/?q=place_id:${placeItem.location.placeId}`
+                        : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(placeItem.location.name)}`
+                    }
                     target="_blank"
                     rel="noopener noreferrer"
                     className="google-maps-link"

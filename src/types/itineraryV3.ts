@@ -5,6 +5,7 @@ export interface Location {
   lat: number;
   lng: number;
   name: string;
+  placeId?: string; // Google Place ID for more accurate links
 }
 
 export interface PlaceItem {
@@ -89,7 +90,7 @@ export const itineraryDataV3: ItineraryItemV3[] = [
     id: '1',
     type: 'place',
     title: 'Land at Boston Logan',
-    location: { lat: 42.3656, lng: -71.0096, name: 'Boston Logan Airport' },
+    location: { lat: 42.3656, lng: -71.0096, name: 'Boston Logan Airport', placeId: 'ChIJN0na1RRw44kRRFEtH8OUkww' },
     duration: 30, // 30 minutes to get through airport
     startTime: '8:00 AM', // FIXED TIME
     description: 'Arrival at Boston Logan International Airport'
@@ -107,7 +108,7 @@ export const itineraryDataV3: ItineraryItemV3[] = [
     id: '3',
     type: 'place',
     title: 'Grab a coffee at Tatte',
-    location: { lat: 42.3484, lng: -71.0866, name: 'Tatte Bakery - 160 Massachusetts Ave' },
+    location: { lat: 42.3484, lng: -71.0866, name: 'Tatte Bakery - 160 Massachusetts Ave', placeId: 'ChIJ4TN6r5B744kR0NyN-spvs3c' },
     duration: 60, // 1 hour for breakfast
     description: 'Coffee at Tatte Bakery & Cafe'
   },
@@ -124,7 +125,7 @@ export const itineraryDataV3: ItineraryItemV3[] = [
     id: '5',
     type: 'place',
     title: 'Meet up',
-    location: { lat: 42.3489, lng: -71.0796, name: '780 Boylston Street' },
+    location: { lat: 42.3489, lng: -71.0796, name: '780 Boylston Street', placeId: 'ChIJVUG_OA2C44kRE2xsAcVY9Gk' },
     duration: 30, // 30 minutes
     description: 'Morning meetup at 780 Boylston St'
   },
@@ -141,7 +142,7 @@ export const itineraryDataV3: ItineraryItemV3[] = [
     id: '7',
     type: 'place',
     title: 'Public Garden',
-    location: { lat: 42.3541, lng: -71.0704, name: 'Boston Public Garden' },
+    location: { lat: 42.3541, lng: -71.0704, name: 'Boston Public Garden', placeId: 'ChIJu2Argp5w44kRAecWXgt_18s' },
     duration: 30, // 30 minutes in the garden
     description: 'Walk through the beautiful Boston Public Garden'
   },
@@ -158,7 +159,7 @@ export const itineraryDataV3: ItineraryItemV3[] = [
     id: '9',
     type: 'place',
     title: 'Faneuil Hall',
-    location: { lat: 42.3600, lng: -71.0546, name: 'Faneuil Hall' },
+    location: { lat: 42.3600, lng: -71.0546, name: 'Faneuil Hall', placeId: 'ChIJpyiwa4Zw44kRBQSGWKv4wgA' },
     duration: 30, // 30 minutes
     description: 'Historic marketplace and meeting hall'
   },
@@ -175,7 +176,7 @@ export const itineraryDataV3: ItineraryItemV3[] = [
     id: '11',
     type: 'place',
     title: 'North End',
-    location: { lat: 42.3647, lng: -71.0542, name: 'North End' },
+    location: { lat: 42.3647, lng: -71.0542, name: 'North End', placeId: 'ChIJKRXowbtz44kRORvv6Mx_MDw' },
     duration: 60, // 1 hour for lunch and exploration
     description: "Boston's Little Italy - grab lunch here"
   },
@@ -192,7 +193,7 @@ export const itineraryDataV3: ItineraryItemV3[] = [
     id: '13',
     type: 'place',
     title: 'Kendall/MIT',
-    location: { lat: 42.3629, lng: -71.0901, name: 'Kendall/MIT Station' },
+    location: { lat: 42.3629, lng: -71.0901, name: 'Kendall/MIT Station', placeId: 'ChIJ0a1MRa9w44kRjIOGckAkP-0' },
     duration: 5, // Quick stop
     description: 'Arrive at Kendall/MIT Station'
   },
@@ -209,7 +210,7 @@ export const itineraryDataV3: ItineraryItemV3[] = [
     id: '15',
     type: 'place',
     title: 'Walk around MIT',
-    location: { lat: 42.3601, lng: -71.0942, name: 'MIT Campus' },
+    location: { lat: 42.3601, lng: -71.0942, name: 'MIT Campus', placeId: 'ChIJ9SRZcapw44kRiBW_a5dU0T8' },
     duration: 120, // 2 hours
     description: 'Explore MIT campus'
   },
@@ -226,7 +227,7 @@ export const itineraryDataV3: ItineraryItemV3[] = [
     id: '17',
     type: 'place',
     title: 'Harvard',
-    location: { lat: 42.3732, lng: -71.1190, name: 'Harvard Square' },
+    location: { lat: 42.3732, lng: -71.1190, name: 'Harvard Square', placeId: 'ChIJecplvEJ344kRdjumhjIYylk' },
     duration: 60, // 1 hour
     description: 'Explore Harvard Square'
   },
@@ -243,7 +244,7 @@ export const itineraryDataV3: ItineraryItemV3[] = [
     id: '19',
     type: 'place',
     title: 'Arrive at Prudential',
-    location: { lat: 42.3477, lng: -71.0818, name: 'Prudential Station' },
+    location: { lat: 42.3477, lng: -71.0818, name: 'Prudential Station', placeId: 'ChIJnbFJuBF644kRY0fyfdUau8s' },
     duration: 5, // Quick stop
     description: 'Take the Green Line E to Prudential Station'
   },
@@ -260,7 +261,7 @@ export const itineraryDataV3: ItineraryItemV3[] = [
     id: '21',
     type: 'place',
     title: 'Prudential Observatory',
-    location: { lat: 42.3471, lng: -71.0817, name: 'Prudential Center' },
+    location: { lat: 42.3471, lng: -71.0817, name: 'Prudential Center', placeId: 'ChIJzdiyTA5644kRz3wEWcxaKGc' },
     duration: 60, // 1 hour for views and maybe a drink
     description: 'Visit the top of the Prudential Observatory'
   },
@@ -277,7 +278,7 @@ export const itineraryDataV3: ItineraryItemV3[] = [
     id: '23',
     type: 'place',
     title: 'Train to NYC',
-    location: { lat: 42.3522, lng: -71.0552, name: 'South Station' },
+    location: { lat: 42.3522, lng: -71.0552, name: 'South Station', placeId: 'ChIJO9MT_YFw44kRXBK1FWNwssY' },
     duration: 30, // 30 minutes before departure
     startTime: '7:45 PM', // FIXED TIME
     description: 'Depart for New York City'
