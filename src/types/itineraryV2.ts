@@ -32,7 +32,7 @@ export const itineraryDataV2: ItineraryItemV2[] = [
   {
     id: '1',
     type: 'place',
-    time: '7:00 PM',
+    time: '7:00 AM',
     title: 'Land at Boston Logan',
     location: { lat: 42.3656, lng: -71.0096, name: 'Boston Logan Airport' },
     description: 'Arrival at Boston Logan International Airport'
@@ -48,7 +48,7 @@ export const itineraryDataV2: ItineraryItemV2[] = [
   {
     id: '3',
     type: 'place',
-    time: '8:00 PM',
+    time: '8:00 AM',
     title: 'Grab a coffee at Tatte',
     location: { lat: 42.3484, lng: -71.0866, name: 'Tatte Bakery - 160 Massachusetts Ave' },
     description: 'Coffee at Tatte Bakery & Cafe'
