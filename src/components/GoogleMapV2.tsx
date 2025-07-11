@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { GoogleMap, useJsApiLoader, DirectionsRenderer, InfoWindow, MarkerF } from '@react-google-maps/api';
-import type { ItineraryItemV2, PlaceItem } from '../types/itineraryV2';
+import type { ItineraryItemV3, PlaceItem } from '../types/itineraryV3';
 
 // Define libraries outside component to prevent reloading
 const libraries: ("places" | "drawing" | "geometry" | "visualization")[] = ['places'];
 
 interface MapProps {
-  items: ItineraryItemV2[];
+  items: ItineraryItemV3[];
   selectedItem: string | null;
 }
 

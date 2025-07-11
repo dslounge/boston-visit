@@ -1,26 +1,26 @@
 import { useState } from 'react'
 import './App.css'
-import { SidebarV2 } from './components/SidebarV2'
+import { SidebarV3 } from './components/SidebarV3'
 import { GoogleMapV2 } from './components/GoogleMapV2'
-import { itineraryDataV2 } from './types/itineraryV2'
-import type { ItineraryItemV2 } from './types/itineraryV2'
+import { itineraryDataV3 } from './types/itineraryV3'
+import type { ItineraryItemV3 } from './types/itineraryV3'
 
 function App() {
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
 
-  const handleItemClick = (item: ItineraryItemV2) => {
+  const handleItemClick = (item: ItineraryItemV3) => {
     setSelectedItem(item.id);
   };
 
   return (
     <div className="app">
-      <SidebarV2 
-        items={itineraryDataV2} 
+      <SidebarV3 
+        items={itineraryDataV3} 
         selectedItem={selectedItem}
         onItemClick={handleItemClick}
       />
       <GoogleMapV2 
-        items={itineraryDataV2}
+        items={itineraryDataV3}
         selectedItem={selectedItem}
       />
     </div>
