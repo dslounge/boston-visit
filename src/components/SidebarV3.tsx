@@ -72,7 +72,7 @@ export const SidebarV3: React.FC<SidebarProps> = ({ items, selectedItem, onItemC
                   <a 
                     href={
                       placeItem.location.placeId
-                        ? `https://www.google.com/maps/place/?q=place_id:${placeItem.location.placeId}`
+                        ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(placeItem.location.name)}&query_place_id=${placeItem.location.placeId}`
                         : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(placeItem.location.name)}`
                     }
                     target="_blank"
