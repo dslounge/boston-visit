@@ -1,5 +1,5 @@
 import React from 'react';
-import { Train, MapPin, Bus, ArrowDown } from 'lucide-react';
+import { Train, MapPin, Bus } from 'lucide-react';
 import type { ItineraryItemV2, PlaceItem, TravelItem } from '../types/itineraryV2';
 
 interface SidebarProps {

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import type { ItineraryItem } from '../types/itinerary';
@@ -87,11 +87,6 @@ const MapController: React.FC<{ selectedItem: string | null; items: ItineraryIte
 export const Map: React.FC<MapProps> = ({ items, selectedItem }) => {
   const center: [number, number] = [42.3601, -71.0589]; // Boston center
   
-  // Create polyline points from itinerary locations
-  const polylinePoints: [number, number][] = items.map(item => [
-    item.location.lat,
-    item.location.lng
-  ]);
 
   // Different colors for walking vs train segments
   const segments: { points: [number, number][]; color: string }[] = [];

@@ -41,8 +41,6 @@ export async function getWalkingRoute(
   end: { lat: number; lng: number }
 ): Promise<RouteSegment | null> {
   try {
-    const url = `https://api.openrouteservice.org/v2/directions/foot-walking?api_key=YOUR_API_KEY&start=${start.lng},${start.lat}&end=${end.lng},${end.lat}`;
-    
     // Note: You'll need to sign up for a free API key at https://openrouteservice.org/sign-up
     // For demo purposes, we're returning mock data
     console.log('To get real directions, sign up for a free API key at https://openrouteservice.org/sign-up');
@@ -65,8 +63,6 @@ export async function getTransitRoute(
   end: { lat: number; lng: number }
 ): Promise<RouteSegment | null> {
   try {
-    const url = `https://api.geoapify.com/v1/routing?waypoints=${start.lat},${start.lng}|${end.lat},${end.lng}&mode=transit&apiKey=YOUR_API_KEY`;
-    
     // Note: Sign up for free at https://www.geoapify.com/
     console.log('To get real transit directions, sign up for a free API key at https://www.geoapify.com/');
     

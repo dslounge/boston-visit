@@ -5,7 +5,7 @@ import { getAllGoogleRoutes, formatDuration, formatDistance } from '../services/
 import type { GoogleRouteInfo } from '../services/googleDirections';
 
 // Define libraries outside component to prevent reloading
-const libraries: ("places" | "drawing" | "geometry" | "localContext" | "visualization")[] = ['places'];
+const libraries: ("places" | "drawing" | "geometry" | "visualization")[] = ['places'];
 
 interface MapProps {
   items: ItineraryItem[];

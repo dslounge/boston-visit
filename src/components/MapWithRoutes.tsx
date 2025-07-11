@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import type { ItineraryItem } from '../types/itinerary';
-import { getAllRoutes, formatDuration, formatDistance, RouteInfo } from '../services/mapboxDirections';
+import { getAllRoutes, formatDuration, formatDistance } from '../services/mapboxDirections';
+import type { RouteInfo } from '../services/mapboxDirections';
 import 'leaflet/dist/leaflet.css';
 
 // Fix for default markers

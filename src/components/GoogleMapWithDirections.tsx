@@ -1,9 +1,9 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { GoogleMap, useJsApiLoader, DirectionsRenderer, InfoWindow, MarkerF } from '@react-google-maps/api';
 import type { ItineraryItem } from '../types/itinerary';
 
 // Define libraries outside component to prevent reloading
-const libraries: ("places" | "drawing" | "geometry" | "localContext" | "visualization")[] = ['places'];
+const libraries: ("places" | "drawing" | "geometry" | "visualization")[] = ['places'];
 
 interface MapProps {
   items: ItineraryItem[];
