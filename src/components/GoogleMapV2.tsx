@@ -95,9 +95,9 @@ export const GoogleMapV2: React.FC<MapProps> = ({ items, selectedItem }) => {
                 const result = await directionsService.route(request);
                 responses.push(result);
                 
-                // Update travel duration in the data
+                // Log travel duration for debugging
                 if (result.routes?.[0]?.legs?.[0]?.duration?.text) {
-                  travelInfo.duration = result.routes[0].legs[0].duration.text;
+                  console.log(`Travel time: ${result.routes[0].legs[0].duration.text}`);
                 }
               } catch (error) {
                 console.error(`Error fetching route:`, error);
@@ -196,9 +196,6 @@ export const GoogleMapV2: React.FC<MapProps> = ({ items, selectedItem }) => {
         >
           <div style={{ padding: '5px', maxWidth: '300px' }}>
             <h3 style={{ margin: '0 0 8px 0', fontSize: '16px' }}>{selectedMarker.item.title}</h3>
-            <p style={{ margin: '0 0 4px 0', fontSize: '14px', color: '#666' }}>
-              {selectedMarker.item.time}
-            </p>
             {selectedMarker.item.description && (
               <p style={{ margin: '0', fontSize: '14px' }}>
                 {selectedMarker.item.description}
